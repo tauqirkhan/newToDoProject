@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="sidebar">
+            <div class="home"></div>
+            <div class="project"></div>
+            <div class="notes"></div>
+        </div>
+        <div class="content">
+            <div class="addBtnDiv">
+                <button id="addBtn"></button>
+            </div>
+            <div class="allSidebarContentDiv"></div>
+            <dialog id="dialog">
+                <form id="addContent">
+                    <div class="name">
+                        <label for="title">Enter task title: </label>
+                        <input type="text" id="title" name="taskName">
+                    </div>
+                    <div class="details">
+                        <label for="description">Enter task description: </label>
+                        <input type="text" id="description" name="taskDescription">
+                    </div>
+                    <div class="precedence">
+                        <label for="priority">Select priority: </label>
+                        <select name="taskPrioirty" id="priority">
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Add Task">
+                    <input type="button" value="Cancel">
+                </form>
+            </dialog>
+        </div>
+    </div>
+</body>
+</html>
