@@ -1,1 +1,68 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>To Do List</title><script defer="defer" src="main.js"></script></head><body><div class="container"><div class="header"></div><div class="sidebar"><div class="home"></div><div class="project"></div><div class="notes"></div></div><div class="content"><div class="addBtnDiv"><button id="addBtn"></button></div><div class="allSidebarContentDiv"></div><dialog id="dialog"><form id="addContent"><div class="name"><label for="title">Enter task title:</label> <input id="title" name="taskName"></div><div class="details"><label for="description">Enter task description:</label> <input id="description" name="taskDescription"></div><div class="precedence"><label for="priority">Select priority:</label> <select name="taskPrioirty" id="priority"><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option></select></div><input type="submit" value="Add Task"> <input type="button" value="Cancel"></form></dialog></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="954a36177e2585084b94.svg" alt="logo" id="logoSVG">
+            <span>To-Do-List</span>
+        </div>
+        <div class="sidebar">
+            <div class="home">
+                <img src="954a36177e2585084b94.svg" alt="logo" id="homeSVG">
+                <span>Home</span>
+            </div>
+            <div class="project">
+                <div id="projectFirstChild">
+                    <img src="bb7d22c057feef8d20fc.svg" alt="project" id='projectSVG'>
+                    <span>Project</span>
+                    <img src="f7a27723a47b68388302.svg" alt="add" id="addProjectSVG">
+                </div>
+                <div id="projectSecondChild">
+                    <div id="projectsParent"></div>
+                </div>
+            </div>
+            <div class="notes">
+                <img src="099751876dd8a3283a92.svg" alt="notes" id="noteSvg">
+                <span>Notes</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="addBtnDiv">
+                <button id="addBtn">+ Add Task</button>
+            </div>
+            <div class="allSidebarContentDiv"></div>
+            <dialog id="contentDialog">
+                <form id="contentForm">
+                    <div class="name">
+                        <label for="title">Enter task title: </label>
+                        <input type="text" id="title" name="taskName">
+                    </div>
+                    <div class="details">
+                        <label for="description">Enter task description: </label>
+                        <input type="text" id="description" name="taskDescription">
+                    </div>
+                    <div class="precedence">
+                        <label for="priority">Select priority: </label>
+                        <select name="taskPrioirty" id="priority">
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    <div class="dateFormDiv">
+                        <label for="dueDate">Enter deadline</label>
+                        <input type="date" id="dueDate" name="taskDeadline">
+                    </div>
+                    <input type="submit" value="Add Task">
+                    <input type="button" value="Cancel" id="cancelFormBtn">
+                </form>
+            </dialog>
+        </div>
+    </div>
+</body>
+</html>

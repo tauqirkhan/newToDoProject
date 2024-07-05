@@ -7,19 +7,37 @@
 </head>
 <body>
     <div class="container">
-        <div class="header"></div>
+        <div class="header">
+            <img src="./assets/heading.svg" alt="logo" id="logoSVG">
+            <span>To-Do-List</span>
+        </div>
         <div class="sidebar">
-            <div class="home"></div>
-            <div class="project"></div>
-            <div class="notes"></div>
+            <div class="home">
+                <img src="./assets/heading.svg" alt="logo" id="homeSVG">
+                <span>Home</span>
+            </div>
+            <div class="project">
+                <div id="projectFirstChild">
+                    <img src="./assets/project.svg" alt="project" id='projectSVG'>
+                    <span>Project</span>
+                    <img src="./assets/add.svg" alt="add" id="addProjectSVG">
+                </div>
+                <div id="projectSecondChild">
+                    <div id="projectsParent"></div>
+                </div>
+            </div>
+            <div class="notes">
+                <img src="./assets/note.svg" alt="notes" id="noteSvg">
+                <span>Notes</span>
+            </div>
         </div>
         <div class="content">
             <div class="addBtnDiv">
-                <button id="addBtn"></button>
+                <button id="addBtn">+ Add Task</button>
             </div>
             <div class="allSidebarContentDiv"></div>
-            <dialog id="dialog">
-                <form id="addContent">
+            <dialog id="contentDialog">
+                <form id="contentForm">
                     <div class="name">
                         <label for="title">Enter task title: </label>
                         <input type="text" id="title" name="taskName">
@@ -36,8 +54,12 @@
                             <option value="low">Low</option>
                         </select>
                     </div>
+                    <div class="dateFormDiv">
+                        <label for="dueDate">Enter deadline</label>
+                        <input type="date" id="dueDate" name="taskDeadline">
+                    </div>
                     <input type="submit" value="Add Task">
-                    <input type="button" value="Cancel">
+                    <input type="button" value="Cancel" id="cancelFormBtn">
                 </form>
             </dialog>
         </div>

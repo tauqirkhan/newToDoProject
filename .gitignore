@@ -63,7 +63,6 @@ out
 
 # Nuxt.js build / generated files
 .nuxt
-dist
 
 # Gatsby files
 .cache/
